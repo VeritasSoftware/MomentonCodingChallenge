@@ -26,6 +26,50 @@ The Angular 5 CLI app front end has
     *   This calls the API using HttpClient
     *   Displays the result    
 
-**Screenshot:**
+**The Web API response JSON is like:**
+
+```json
+{
+  "manages": [
+    {
+      "manages": [
+        {
+          "manages": [],
+          "employeeName": "Martin",
+          "id": 220,
+          "managerId": 100
+        },
+        {
+          "manages": [],
+          "employeeName": "Alex",
+          "id": 275,
+          "managerId": 100
+        }
+      ],
+      "employeeName": "Alan",
+      "id": 100,
+      "managerId": 150
+    },
+    {
+      "manages": [
+        {
+          "manages": [],
+          "employeeName": "David",
+          "id": 190,
+          "managerId": 400
+        }
+      ],
+      "employeeName": "Steve",
+      "id": 400,
+      "managerId": 150
+    }
+  ],
+  "employeeName": "Jamie",
+  "id": 150,
+  "managerId": null
+}
+```
+
+**UI Screenshot:**
 
 ![Screenshot](https://github.com/VeritasSoftware/MomentonCodingChallenge/blob/master/momenton.web/Screenshot.JPG)
