@@ -28,7 +28,9 @@ The Angular 5 CLI app front end has
 
 **The Web API response JSON is like:**
 
-```json
+The hierarchy is built into the data structure as shown below.
+
+```javascript
 {
   "manages": [
     {
