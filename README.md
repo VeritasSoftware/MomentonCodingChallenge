@@ -12,7 +12,7 @@ The Web API has
 *   a Company controller
     *   This contains a GET API called hierachy
 
-        | ----- API ----- | ---- Verb ---- | ----- Route ---- | ----- Sample Url ------ |
+        | API | Verb | Route | Sample Url |
         | ---------- | -------- | --------- | ----------- |
         | hierarchy | GET | /api/Company/hierarchy | http://localhost:64800/api/Company/hierarchy |
 
