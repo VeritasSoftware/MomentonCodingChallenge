@@ -14,7 +14,7 @@ The Web API has
 
         | ----- API ----- | ---- Verb ---- | ----- Route ---- | ----- Sample Url ------ |
         | ---------- | -------- | --------- | ----------- |
-        | ---- hierarchy ------ | ---- GET ----- | ----- /api/Company/hierarchy ------ | ------- http://localhost:64800/api/Company/hierarchy ----- |
+        | hierarchy | GET | /api/Company/hierarchy | http://localhost:64800/api/Company/hierarchy |
 
 *   an Employee Repository
     *   This computes the company hierachy based on data
