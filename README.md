@@ -21,14 +21,14 @@ The Web API has
 
 The Angular 5 CLI app front end has
 
-*   A component called company-hierarchy
+*   a component called company-hierarchy
 
     *   This calls the API using HttpClient
     *   Displays the result    
 
 **The Web API response JSON is like:**
 
-The hierarchy is built into the data structure as shown below.
+The hierarchy is built into the data structure.
 
 ```javascript
 {
