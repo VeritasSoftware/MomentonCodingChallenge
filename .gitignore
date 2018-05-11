@@ -2,4 +2,6 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/Momenton.API/Momenton.API
+/Momenton.API/
+Momenton.API/.vs/Momenton.API/v15/.suo
+Momenton.API/.vs/Momenton.API/v15/Server/sqlite3/storage.ide-wal

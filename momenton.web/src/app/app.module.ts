@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { CompanyHierarchyComponent } from './components/company-hierarchy/company-hierarchy.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CompanyHierarchyComponent
   ],
   imports: [
     BrowserModule
