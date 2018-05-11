@@ -4,8 +4,8 @@ The solution has a **micro service architecture**.
 
 It consists of
 
-*   An ASPNET Core 2.0 Web API (micro service) back end
-*   An Angular 5 CLI app front end
+*   An **ASPNET Core 2.0 Web API** (micro service) back end
+*   An **Angular 5 CLI app** front end
 
 The Web API has
 
@@ -22,6 +22,7 @@ The Web API has
 The Angular 5 CLI app front end has
 
 *   A component called company-hierarchy
+
     *   This calls the API using HttpClient
     *   Displays the result    
 
