@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Momenton.API", "Momenton.API\Momenton.API.csproj", "{9E394DC6-E062-4096-BDE6-16DA4AB37726}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E394DC6-E062-4096-BDE6-16DA4AB37726}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E394DC6-E062-4096-BDE6-16DA4AB37726}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E394DC6-E062-4096-BDE6-16DA4AB37726}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E394DC6-E062-4096-BDE6-16DA4AB37726}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2B6E66DE-403D-47A1-B92E-7264B3B72A86}
+	EndGlobalSection
+EndGlobal
