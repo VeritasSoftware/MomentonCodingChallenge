@@ -15,6 +15,9 @@ export class CompanyHierarchyComponent implements OnInit {
 
   async ngOnInit() {
     try {
+      this.companyHierarchy = "";
+
+      //Make http call to get company hierarchy
       await this.http.get<EmployeeManager>("http://localhost:64800/api/company/hierarchy")
                      .subscribe(employeeManager => {
                          this.companyHierarchy = this.displayCompanyHierarchy(employeeManager, 0)
@@ -25,6 +28,9 @@ export class CompanyHierarchyComponent implements OnInit {
     }    
   }
 
+  /*******************************************************/
+  /* Recursive function to display the company hierarchy */
+  /*******************************************************/
   displayCompanyHierarchy(manager: EmployeeManager, depth: number) : string {
     var tabs = Array(depth * 20).join("&nbsp;");
     var employeeName = tabs + manager.employeeName;
