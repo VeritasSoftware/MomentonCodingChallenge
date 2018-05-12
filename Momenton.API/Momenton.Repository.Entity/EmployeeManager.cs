@@ -3,22 +3,12 @@
 namespace Momenton.Repository.Entity
 {
     /// <summary>
-    /// Class EmployeeManager
+    /// Class EmployeeManager - Recursive
     /// </summary>
     public class EmployeeManager : Employee
     {
         private List<EmployeeManager> _manages = new List<EmployeeManager>();
 
-        public List<EmployeeManager> Manages
-        {
-            get
-            {
-                return _manages;
-            }
-            set
-            {
-                _manages = value;
-            }
-        }
+        public List<EmployeeManager> Manages => _manages;        
     }
 }
