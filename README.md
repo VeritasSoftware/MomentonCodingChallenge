@@ -9,18 +9,32 @@ It consists of
 
 The Web API has
 
-*   an Employee Context
-    *   This contains a list of Employees. This Context is injected into the Repository.
+*   an Entity project
+    *   This contains the Entities (which are the data structures) used in the Repository.
 
-*   an Employee Repository
-    *   This computes the company hierachy based on data. This Repository is injected into the Controller.
+*   a Repository project
+    *   This contains
 
-*   a Company Controller
-    *   This contains a GET API called hierachy.
+        *   an Employee Context
+            *   This contains a list of Employees. This Context is injected into the Repository.
 
-        | API | Verb | Route | Sample Url |
-        | ---------- | -------- | --------- | ----------- |
-        | hierarchy | GET | /api/Company/hierarchy | http://localhost:64800/api/Company/hierarchy |
+        *   an Employee Repository
+            *   This computes the company hierachy based on data. This Repository is injected into the Controller.
+
+* an ASPNET Core 2.0 Web API project
+    *   This contains
+        
+        *   a Company Controller
+            *   This contains a GET API called hierachy.
+
+                | API | Verb | Route | Sample Url |
+                | ---------- | -------- | --------- | ----------- |
+                | hierarchy | GET | /api/Company/hierarchy | http://localhost:64800/api/Company/hierarchy |
+
+            *   The API calls into the Repository.                
+
+*   an Unit Test project
+    *   This contains unit tests for the Repository.
 
 The Angular 5 CLI app front end has
 
