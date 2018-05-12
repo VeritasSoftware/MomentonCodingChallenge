@@ -4,7 +4,7 @@ The solution has a **micro service architecture**.
 
 It consists of
 
-*   An **ASPNET Core 2.0 Web API** (micro service) back end
+*   An **ASPNET Core 2.0 Web API** back end micro service
 *   An **Angular 5 CLI app** front end UI
 
 The Web API has
@@ -93,7 +93,7 @@ The hierarchy is built into the data structure.
 
 ![Screenshot](https://github.com/VeritasSoftware/MomentonCodingChallenge/blob/master/momenton.web/Screenshot.JPG)
 
-**Development Environments**
+**Development Environments:**
 
 | Component | Environment |
 | ------- | ------ |
