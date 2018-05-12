@@ -8,7 +8,7 @@ namespace Momenton.Repository
     /// </summary>
     public class EmployeeRepository : IEmployeeRepository
     {
-        IEmployeeContext _employeeContext;
+        private IEmployeeContext _employeeContext;
 
         /// <summary>
         /// Constructor
@@ -26,7 +26,7 @@ namespace Momenton.Repository
         public EmployeeManager GetCompanyHierarchy()
         {
             //Get complete company hierarchy
-            return _employeeContext.Employees.Hierarchy();
+            return _employeeContext.Employees?.Hierarchy();
         }
     }
 }
