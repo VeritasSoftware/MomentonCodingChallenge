@@ -1,7 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Momenton.Repository;
 using Momenton.Repository.Entity;
-using System;
 using System.Collections.Generic;
 
 namespace Momenton.UnitTests
@@ -9,10 +8,25 @@ namespace Momenton.UnitTests
     [TestClass]
     public class RepositoryTests
     {
+        private IEmployeeContext GetEmployeeContext()
+        {
+            var employees = new List<Employee> {
+
+                    new Employee {  EmployeeName = "Alan", Id = 100, ManagerId = 150 }
+                    , new Employee { EmployeeName = "Martin", Id = 220, ManagerId = 100 }
+                    , new Employee { EmployeeName = "Jamie", Id = 150, ManagerId = null }
+                    , new Employee { EmployeeName = "Alex", Id = 275, ManagerId = 100 }
+                    , new Employee { EmployeeName = "Steve", Id = 400, ManagerId = 150 }
+                    , new Employee { EmployeeName = "David", Id = 190, ManagerId = 400 }                                                                                                                                                                             
+                };
+
+            return new EmployeeContext(employees);
+        }
+
         [TestMethod]
         public void Test_GetCompanyHierarchy()
         {
-            IEmployeeRepository employeeRepository = new EmployeeRepository();
+            IEmployeeRepository employeeRepository = new EmployeeRepository(GetEmployeeContext());
 
             var hierarchy = employeeRepository.GetCompanyHierarchy();
 

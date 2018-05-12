@@ -20,6 +20,7 @@ namespace Momenton.API
         public void ConfigureServices(IServiceCollection services)
         {
             //Add dependency injection
+            services.AddScoped<IEmployeeContext, EmployeeContext>();
             services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 
             services.AddMvc();
@@ -36,6 +37,12 @@ namespace Momenton.API
         {
             // Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger();
+
+            app.UseCors(builder =>
+                    builder.AllowAnyOrigin()
+                           .AllowAnyMethod()
+                           .AllowAnyHeader()
+                    );
 
             // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), 
             // specifying the Swagger JSON endpoint.
