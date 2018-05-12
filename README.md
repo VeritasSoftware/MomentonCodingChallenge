@@ -10,7 +10,7 @@ It consists of
 The Web API has
 
 *   an Entity project
-    *   This contains the Entities (which are the data structures) used in the Repository.
+    *   This contains the Entities used in the Repository. These are the data structures.
 
 *   a Repository project
     *   This contains
@@ -43,7 +43,7 @@ The Angular 5 CLI app front end has
     *   This calls the API using HttpClient
     *   Displays the result    
 
-**Data structure**
+**Data structure:**
 
 The hierarchy is built into the data structure.
 
