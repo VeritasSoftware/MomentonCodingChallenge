@@ -5,19 +5,22 @@ The solution has a **micro service architecture**.
 It consists of
 
 *   An **ASPNET Core 2.0 Web API** (micro service) back end
-*   An **Angular 5 CLI app** front end
+*   An **Angular 5 CLI app** front end UI
 
 The Web API has
 
-*   a Company controller
-    *   This contains a GET API called hierachy
+*   an Employee Context
+    *   This contains a list of Employees. This Context is injected into the Repository.
+
+*   an Employee Repository
+    *   This computes the company hierachy based on data. This Repository is injected into the Controller.
+
+*   a Company Controller
+    *   This contains a GET API called hierachy.
 
         | API | Verb | Route | Sample Url |
         | ---------- | -------- | --------- | ----------- |
         | hierarchy | GET | /api/Company/hierarchy | http://localhost:64800/api/Company/hierarchy |
-
-*   an Employee Repository
-    *   This computes the company hierachy based on data
 
 The Angular 5 CLI app front end has
 
