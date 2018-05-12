@@ -92,3 +92,10 @@ The hierarchy is built into the data structure.
 **UI Screenshot:**
 
 ![Screenshot](https://github.com/VeritasSoftware/MomentonCodingChallenge/blob/master/momenton.web/Screenshot.JPG)
+
+**Development Environments**
+
+| Component | Environment |
+| ------- | ------ |
+| ASPNET Core 2.0 Web API | Visual Studio 2017 |
+| Angular 5 CLI app | Visual Studio Code |
