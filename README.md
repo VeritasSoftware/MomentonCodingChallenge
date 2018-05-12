@@ -43,9 +43,36 @@ The Angular 5 CLI app front end has
     *   This calls the API using HttpClient
     *   Displays the result    
 
-**The Web API response JSON is like:**
+**Data structure**
 
 The hierarchy is built into the data structure.
+
+```cs
+    /// <summary>
+    /// Class Employee
+    /// </summary>
+    public class Employee
+    {        
+        public string EmployeeName { get; set; }
+
+        public uint Id { get; set; }
+
+        public uint? ManagerId { get; set; }        
+    }
+
+
+    /// <summary>
+    /// Class EmployeeManager - Recursive
+    /// </summary>
+    public class EmployeeManager : Employee
+    {
+        private List<EmployeeManager> _manages = new List<EmployeeManager>();
+
+        public List<EmployeeManager> Manages => _manages;        
+    }
+```
+
+**The Web API response JSON is like:**
 
 ```javascript
 {
