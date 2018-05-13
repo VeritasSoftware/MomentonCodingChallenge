@@ -113,16 +113,31 @@ The hierarchy is built into the data structure.
 
 The app has
 
+*   Models mirroring the API response.
+
+    ```javascript
+    export class Employee {        
+        employeeName: string;
+        id: number;
+        manangerId?: number;        
+    }
+
+    export class EmployeeManager extends Employee
+    {
+        manages: EmployeeManager[]        
+    }
+    ```
+
 *   a Service called Company Service (in **TypeScript**) which
     
     *   calls the API using HttpClient.
-    *   generates the display string.
+    *   generates the display string from the Models using a recursive function.
     *   is injected into the Component.
 
 *   a Component called company-hierarchy which
 
     *   calls the API using the injected Company Service.
-    *   displays the result.  
+    *   displays the hierarchy string.  
 
 
 **UI Screenshot:**
