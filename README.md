@@ -117,12 +117,12 @@ The app has
     
     *   calls the API using HttpClient.
     *   generates the display string.
-    *   is injected into the component.
+    *   is injected into the Component.
 
-*   a Component called company-hierarchy
+*   a Component called company-hierarchy which
 
-    *   This calls the API using the injected Comany Service.
-    *   Displays the result.  
+    *   calls the API using the injected Company Service.
+    *   displays the result.  
 
 
 **UI Screenshot:**
