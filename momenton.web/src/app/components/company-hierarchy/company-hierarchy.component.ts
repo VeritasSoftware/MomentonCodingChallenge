@@ -23,7 +23,7 @@ export class CompanyHierarchyComponent implements OnInit {
       this.companyHierarchy = "";
 
       //Make async http call to get company hierarchy using the CompanyService
-      await this.companyService.GetCompanyHierarchy(heirarchy => this.companyHierarchy = heirarchy);
+      await this.companyService.GetCompanyHierarchy(hierarchy => this.companyHierarchy = hierarchy);
     }
     catch(e) {
       alert(e);
