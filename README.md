@@ -34,14 +34,7 @@ The Web API has
             *   The API calls into the Repository.                
 
 *   an Unit Test project
-    *   This contains unit tests for the Repository.
-
-The Angular 5 CLI app front end has
-
-*   a component called company-hierarchy
-
-    *   This calls the API using HttpClient
-    *   Displays the result    
+    *   This contains unit tests for the Repository.  
 
 **Data structure:**
 
@@ -116,9 +109,26 @@ The hierarchy is built into the data structure.
 }
 ```
 
+**UI front end - Angular 5 CLI app architecture**
+
+The app has
+
+*   a Service called Company Service (in **TypeScript**) which
+    
+    *   calls the API using HttpClient.
+    *   generates the display string.
+    *   is injected into the component.
+
+*   a Component called company-hierarchy
+
+    *   This calls the API using the injected Comany Service.
+    *   Displays the result.  
+
+
 **UI Screenshot:**
 
 ![Screenshot](https://github.com/VeritasSoftware/MomentonCodingChallenge/blob/master/momenton.web/Screenshot.JPG)
+
 
 **Development Environments:**
 

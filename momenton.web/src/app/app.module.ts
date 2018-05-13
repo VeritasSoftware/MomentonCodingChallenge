@@ -7,7 +7,7 @@ import { appRoutes } from './routerConfig';
 
 import { AppComponent } from './app.component';
 import { CompanyHierarchyComponent } from './components/company-hierarchy/company-hierarchy.component';
-
+import { CompanyServiceModule } from './services/company-service/company-service.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { CompanyHierarchyComponent } from './components/company-hierarchy/compan
     HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [CompanyServiceModule],
   bootstrap: [AppComponent, CompanyHierarchyComponent]
 })
 export class AppModule { }
