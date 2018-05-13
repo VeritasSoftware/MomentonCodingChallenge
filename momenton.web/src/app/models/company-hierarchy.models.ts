@@ -1,7 +1,7 @@
 export class Employee {        
     employeeName: string;
     id: number;
-    manangerId?: number;        
+    managerId?: number;        
 }
 
 export class EmployeeManager extends Employee
