@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 
 import { EmployeeManager } from '../../models/company-hierarchy.models';
 import { CompanyService } from '../../services/company-service/company-service';
@@ -14,7 +13,7 @@ export class CompanyHierarchyComponent implements OnInit {
   companyHierarchy: string;
 
   /**************************************/
-  /* Constructor ************************/
+  /* Constructor                        */
   /* http: The injected Company Service */
   /**************************************/  
   constructor(private companyService: CompanyService) { }

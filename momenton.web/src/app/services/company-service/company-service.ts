@@ -9,7 +9,7 @@ export class CompanyService implements ICompanyService {
     private apiBaseUrl:string = "http://localhost:64800/api/Company/";
 
     /*********************************/
-    /* Constructor *******************/
+    /* Constructor                   */
     /* http: The injected HttpClient */
     /*********************************/
     constructor(private http: HttpClient){
@@ -23,15 +23,17 @@ export class CompanyService implements ICompanyService {
     /*************************************/
     async GetCompanyHierarchy(hierarchy: (string)=> void) {
         var url = this.apiBaseUrl + "hierarchy";
+        
         await this.http.get<EmployeeManager>(url)
                        .subscribe(employeeManager => {
+                            //Pass hierarchy string to delegate
                             hierarchy(this.displayCompanyHierarchy(employeeManager, 0))
                        });  
     }
 
-  /*******************************************************/
-  /* Recursive function to display the company hierarchy */
-  /*******************************************************/
+  /***********************************************************************/
+  /* Recursive function to generate the display company hierarchy string */
+  /***********************************************************************/
   displayCompanyHierarchy(manager: EmployeeManager, depth: number) : string {
     var tabs = Array(depth * 20).join("&nbsp;");
     var employeeName = tabs + manager.employeeName;
