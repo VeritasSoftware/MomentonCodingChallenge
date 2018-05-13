@@ -12,10 +12,10 @@ import { CompanyService } from '../../services/company-service/company-service';
 export class CompanyHierarchyComponent implements OnInit {
   companyHierarchy: string;
 
-  /**************************************/
-  /* Constructor                        */
-  /* http: The injected Company Service */
-  /**************************************/  
+  /************************************************/
+  /* Constructor                                  */
+  /* companyService: The injected Company Service */
+  /************************************************/  
   constructor(private companyService: CompanyService) { }
 
   async ngOnInit() {
