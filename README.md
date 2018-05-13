@@ -9,6 +9,8 @@ It consists of
 
 ### ASPNET Core 2.0 Web API micro service architecture - back end
 
+The API has
+
 *   an Entity project
     *   This contains the Entities used in the Repository. These are the data structures.
 
