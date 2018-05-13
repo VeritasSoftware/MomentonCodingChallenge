@@ -18,17 +18,19 @@ export class CompanyService implements ICompanyService {
 
     /*************************************/
     /* Get the company hierarchy         */
-    /* Make asycn http call to API       */
+    /* Make async http call to API       */
     /* Pass hierarchy string to delegate */
     /*************************************/
     async GetCompanyHierarchy(hierarchy: (string)=> void) {
         var url = this.apiBaseUrl + "hierarchy";
-        
+
+        //Async http call to API
+        //The response is transformed into a string for display
+        //The hierarchy string is passed to the delegate
+        //If error, it is also passed to delegate
         await this.http.get<EmployeeManager>(url)
-                       .subscribe(employeeManager => {
-                            //Pass hierarchy string to delegate
-                            hierarchy(this.displayCompanyHierarchy(employeeManager, 0))
-                       });  
+                       .subscribe(employeeManager => hierarchy(this.displayCompanyHierarchy(employeeManager, 0)),
+                                  error => hierarchy(error.message.toString()));  
     }
 
   /***********************************************************************/
