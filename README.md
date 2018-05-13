@@ -7,7 +7,7 @@ It consists of
 *   An **ASPNET Core 2.0 Web API** back end micro service
 *   An **Angular 5 CLI app** front end UI
 
-## ASPNET Core 2.0 Web API micro service architecture - back end
+### ASPNET Core 2.0 Web API micro service architecture - back end
 
 *   an Entity project
     *   This contains the Entities used in the Repository. These are the data structures.
@@ -109,7 +109,7 @@ The hierarchy is built into the data structure.
 }
 ```
 
-## Angular 5 CLI app architecture - UI front end
+### Angular 5 CLI app architecture - UI front end
 
 The app has
 
