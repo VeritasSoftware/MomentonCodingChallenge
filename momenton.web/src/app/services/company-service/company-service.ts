@@ -6,6 +6,7 @@ import { EmployeeManager } from '../../models/company-hierarchy.models';
 
 @Injectable()
 export class CompanyService implements ICompanyService {
+    private apiBaseUrl:string = "http://localhost:64800/api/Company/";
 
     /*********************************/
     /* Constructor *******************/
@@ -21,7 +22,8 @@ export class CompanyService implements ICompanyService {
     /* Pass hierarchy string to delegate */
     /*************************************/
     async GetCompanyHierarchy(hierarchy: (string)=> void) {
-        await this.http.get<EmployeeManager>("http://localhost:64800/api/company/hierarchy")
+        var url = this.apiBaseUrl + "hierarchy";
+        await this.http.get<EmployeeManager>(url)
                        .subscribe(employeeManager => {
                             hierarchy(this.displayCompanyHierarchy(employeeManager, 0))
                        });  
